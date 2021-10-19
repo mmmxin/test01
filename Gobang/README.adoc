@@ -17,5 +17,5 @@ checkerboard.cpp is the member function of the CcheckerBoard class.
 main.cpp
 main.cpp this a main function of this game.
 
-11
+
 
