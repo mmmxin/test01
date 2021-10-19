@@ -101,6 +101,10 @@ std::string CcheckerBoard::m_fnTrans(int n) const
 		return "┴";
 	else if(n==8)
 		return "┘";
+	else if(n==100)
+		return "●";
+	else if(n==200)
+		return "○";
 	else{
 		std::cout<<"ERROR -001"<<std::endl;
 		return "*";
