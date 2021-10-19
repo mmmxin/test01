@@ -1,0 +1,21 @@
+introduction:
+ this is a gomaku game.
+ this Gobang  folder contains two file(include and src).
+
+  the include fioder have a checkerboard.h
+  the src floder have some cpp file.
+
+Concepts:
+
+Checkerboard.h:
+Checkerboard.h is the file which create a class named CcheckerBoard.there are 4 member functions in this class. 
+using this class to describe the checkerboard.
+
+checkerboard.cpp:
+checkerboard.cpp is the member function of the CcheckerBoard class.
+
+main.cpp
+main.cpp this a main function of this game.
+
+
+
