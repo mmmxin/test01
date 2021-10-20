@@ -138,7 +138,7 @@ void CcheckerBoard::m_fnBoardShow() const
 //
 //
 //
-_STATUS CcheckerBoard::m_insertWchess(int x,int y) 
+_STATUS CcheckerBoard::m_fnInsertWchess(int x,int y) 
 {
 //this function is to insert white chess in CcheckerBoard(insert posistion:(x,y))
 	
@@ -156,7 +156,7 @@ _STATUS CcheckerBoard::m_insertWchess(int x,int y)
 //
 //
 //
-_STATUS CcheckerBoard::m_insertBchess(int x,int y) 
+_STATUS CcheckerBoard::m_fnInsertBchess(int x,int y) 
 {
 //this function is to insert black chess in CcheckerBoard(insert posistion:(x,y))
    
@@ -172,6 +172,37 @@ _STATUS CcheckerBoard::m_insertBchess(int x,int y)
 
 }
 
+//
+//
+//
+_STATUS CcheckerBoard::m_fnOutputLog() const
+{
+//this function is used to out put a txt which save the chess log;
+
+
+	/***************ofstream control******************/
+	std::ofstream out;
+	//creat a stream to open or creat a txt;
+	out.open("./log.txt");
+	//open or creat the log.txt;
+	/************************************************/
+
+	/*************save the logs in char**************/
+	int len = m_boardVal.size();
+	//save the length of member value m_boardVal;
+	for(int i = 0; i < len; i++)
+	{
+	//for each line; 
+		for(int j = 0; j < len; j++)
+		{
+		//for each elem;
+			out<<m_fnTrans(m_boardVal[i][j]);
+		}
+		out<<std::endl;
+	}
+	/************************************************/
+	return _TRUE;	
+}
 //
 //
 //
