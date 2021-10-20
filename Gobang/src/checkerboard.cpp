@@ -171,7 +171,6 @@ _STATUS CcheckerBoard::m_fnInsertBchess(int x,int y)
 	//to insert black chess.if input position of chess isn't right ,will return _FALSE;
 
 }
-
 //
 //
 //
