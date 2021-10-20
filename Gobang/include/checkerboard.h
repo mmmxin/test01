@@ -12,6 +12,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<fstream>
 
 
 /**this class to describe the checkerboard*/
@@ -19,7 +20,7 @@ class CcheckerBoard{
 	public:
 		CcheckerBoard();
 		//this is the constructor which is used to initialize the member value;
-		//the size of the checkerboard's defalut value is 15*15
+		//the size of the checkerboard's defalut value is 15*15;
 		
 		CcheckerBoard(int isize);
 		//this is the constructor which is used to initialize thr member value;
@@ -32,11 +33,14 @@ class CcheckerBoard{
 		void m_fnBoardShow() const;
 		//this function is to show the checkerboard based on the member value(m_boardVal);
                 
-	       	_STATUS m_insertWchess(int x,int y) ;
+	       	_STATUS m_fnInsertWchess(int x,int y) ;
 		//this function is to insert the white chess in the CcheckerBoard;
 		 
-	        _STATUS m_insertBchess(int x,int y) ;	
+	        _STATUS m_fnInsertBchess(int x,int y) ;	
                 //this function is to insert the biack  chess in the CcheckerBoard; 
+		
+		_STATUS m_fnOutputLog() const;
+		//this function is used to out put a txt which save the chess log;
 
 	protected:
 		std::vector<std::vector<int>> m_boardVal;
