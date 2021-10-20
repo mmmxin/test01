@@ -23,8 +23,11 @@ class CcheckerBoard{
 
 		void m_fnBoardShow() const;
 		//this function is to show the checkerboard based on the member value(m_boardVal);
-
-
+                
+	       	void m_insertWchess(int x,int y) ;
+		//this function is to insert the white chess in the CcheckerBoard; 
+	        void m_insertBchess(int x,int y) ;	
+                //this function is to insert the biack  chess in the CcheckerBoard; 
 
 	protected:
 		std::vector<std::vector<int>> m_boardVal;

@@ -1,5 +1,5 @@
 #include"checkerboard.h"
-
+using namespace std;
 
 //**********the member function of the class Ccheckerboard**********
 //
@@ -25,7 +25,8 @@ CcheckerBoard::CcheckerBoard()
 		m_boardVal.push_back(line1);
 	//fill the middle line;
 	m_boardVal.push_back(line2);
-	//fill the last line;	
+	//fill the last line;
+		
 }
 //
 //
@@ -74,6 +75,9 @@ CcheckerBoard::CcheckerBoard(int isize)
 	m_boardVal.push_back(line2);
 	//fill the last line;
 	/********************************************/	
+        
+	
+
 }
 //
 //
@@ -131,6 +135,49 @@ void CcheckerBoard::m_fnBoardShow() const
 		//each line need to wrap;
 	}
 }
+//
+//
+//
+void CcheckerBoard::m_insertWchess(int x,int y) 
+{
+//this function is to insert white chess in CcheckerBoard(insert posistion:(x,y))
+    int X = x;
+    int Y = y;
+// to get the position of inserting white chess
+     if(x<m_boardVal.size() && y<m_boardVal.size())
+     {
+ this->m_boardVal[X][Y]=100;
+     }else
+        {
+         cout<<"输入棋子位置错误"<<endl;
+        }
+//to insert whitechess.if input position of chess isn't right ,will otput "输入棋子位置错误 "
+
+
+}
+//
+//
+//
+void CcheckerBoard::m_insertBchess(int x,int y) 
+{
+//this function is to insert black chess in CcheckerBoard(insert posistion:(x,y))
+    int X = x;
+    int Y = y;
+// to get the position of inserting black chess
+     if(x<m_boardVal.size() && y<m_boardVal.size())
+     {
+   this->m_boardVal[X][Y]=200;
+     }else
+        {
+         cout<<"输入棋子位置错误"<<endl;
+        }
+//to insert black chess.if input position of chess isn't right ,will otput "输入棋子位置错误 "
+
+
+
+
+}
+
 //
 //
 //
