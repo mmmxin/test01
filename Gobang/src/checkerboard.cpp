@@ -138,43 +138,37 @@ void CcheckerBoard::m_fnBoardShow() const
 //
 //
 //
-void CcheckerBoard::m_insertWchess(int x,int y) 
+_STATUS CcheckerBoard::m_insertWchess(int x,int y) 
 {
 //this function is to insert white chess in CcheckerBoard(insert posistion:(x,y))
-    int X = x;
-    int Y = y;
-// to get the position of inserting white chess
-     if(x<m_boardVal.size() && y<m_boardVal.size())
-     {
- this->m_boardVal[X][Y]=100;
-     }else
-        {
-         cout<<"输入棋子位置错误"<<endl;
-        }
-//to insert whitechess.if input position of chess isn't right ,will otput "输入棋子位置错误 "
-
+	
+	if(x<m_boardVal.size() && y<m_boardVal.size() && x>=0 && y>=0)
+    	{
+	     	this->m_boardVal[x][y]=200;
+		return _TRUE;
+     	}else
+     	{
+     		return _FALSE;
+     	}
+	//to insert whitechess.if input position of chess isn't right ,will return _FALSE;
 
 }
 //
 //
 //
-void CcheckerBoard::m_insertBchess(int x,int y) 
+_STATUS CcheckerBoard::m_insertBchess(int x,int y) 
 {
 //this function is to insert black chess in CcheckerBoard(insert posistion:(x,y))
-    int X = x;
-    int Y = y;
-// to get the position of inserting black chess
-     if(x<m_boardVal.size() && y<m_boardVal.size())
-     {
-   this->m_boardVal[X][Y]=200;
-     }else
-        {
-         cout<<"输入棋子位置错误"<<endl;
-        }
-//to insert black chess.if input position of chess isn't right ,will otput "输入棋子位置错误 "
-
-
-
+   
+     	if(x<m_boardVal.size() && y<m_boardVal.size() && x>=0 && y>=0)
+     	{
+   		this->m_boardVal[x][y]=100;
+		return _TRUE;
+     	}else
+     	{
+       		return _FALSE;
+     	}	
+	//to insert black chess.if input position of chess isn't right ,will return _FALSE;
 
 }
 
