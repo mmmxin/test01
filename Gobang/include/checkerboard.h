@@ -41,6 +41,8 @@ class CcheckerBoard{
 		
 		_STATUS m_fnOutputLog() const;
 		//this function is used to out put a txt which save the chess log;
+		_STATUS m_fnReadChess(int x,int y,int& values);
+		//this function is used to read the value of the chess,and save the value in the values.
 
 	protected:
 		std::vector<std::vector<int>> m_boardVal;

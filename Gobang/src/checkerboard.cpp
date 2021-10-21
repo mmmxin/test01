@@ -205,4 +205,22 @@ _STATUS CcheckerBoard::m_fnOutputLog() const
 //
 //
 //
+_STATUS CcheckerBoard::m_fnReadChess(int x,int y,int& values )
+{
+//this function is to read the value of chessboard
+     
+        if(x<m_boardVal.size() && y<m_boardVal.size() && x>=0 && y>=0)
+        {
+                values=m_boardVal[x][y];
+                return _TRUE;
+        }else
+        {
+                return _FALSE;
+        }
+//if the position of inputing is right,the value of the chessboard on the position will be get,and return _TRUE.
+
+}
+//
+//
+//
 //*****************************************************************
