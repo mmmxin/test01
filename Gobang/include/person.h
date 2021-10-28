@@ -24,13 +24,13 @@ class Cpeople{
 		//This is the constructor;
 		//main job is to initialize m_peopleID;
 
-		_STATUS m_fnEye(Ccheckerboard myBoard,int x_label,int y_label,int& evalue) const;
+		_STATUS m_fnEye(CcheckerBoard myBoard,int x_label,int y_label,int& evalue) const;
 	        //to imitate the eye of people to see the board;
 		//input an object of the class(Ccheckerboard) which is the checkerboard need to be seen;
 		//input the x_label and y_label of the checkerboard;
 		//the evalue need te be read is the value of the vector of the member of the object of the Ccheckerboard;
 
-		virtual _STATUS m_fnHand(Ccheckerboard myBoard,int x_label,int y_label,int hvalue) = 0;
+		virtual _STATUS m_fnHand(CcheckerBoard myBoard,int x_label,int y_label,int hvalue) = 0;
 		//to imitate the hand of people to play the game;
 		//input an object of the class(Ccheckerboard) which is the checkerboard need to be writed;
 		//input the x_label and y_label of the checkerboard;
@@ -38,7 +38,7 @@ class Cpeople{
 		//this is a pure virtual function becasue of the different of the judge and the player;
 		
 
-		_STATUS m_fnConsiCount(Ccheckerboard myBoard,int x_label,int y_label,DIRECTION mscroDir,int& numOfCount);
+		_STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION mscroDir,int& numOfCount);
 		//to count the number of the piece of the location(depend on the x_label and the y_label) of the checkerboard;
 		//input an object of the class(Ccheckerboard) which is the checkerboard need to be count;
 		//input the x_label and y_label of the checkerboard;
@@ -62,7 +62,7 @@ class Cplayer:public Cpeople{
 		//This is the constructor;
 		//main job is to initialize the m_playerType;
 		
-		virtual  _STATUS m_fnHand(Ccheckerboard myBoard,int x_label,int y_label,int hvalue);
+		virtual  _STATUS m_fnHand(CcheckerBoard myBoard,int x_label,int y_label,int hvalue);
 		//the virtual function inherit from base class;
 		//to imitate the hand of people to play the game;
 		//input an object of the class(Ccheckerboard) which is the checkerboard need to be writed;
