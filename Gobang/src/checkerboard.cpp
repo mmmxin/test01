@@ -141,8 +141,11 @@ void CcheckerBoard::m_fnBoardShow() const
 _STATUS CcheckerBoard::m_fnInsertWchess(int x,int y) 
 {
 //this function is to insert white chess in CcheckerBoard(insert posistion:(x,y))
-	
-	if(x<m_boardVal.size() && y<m_boardVal.size() && x>=0 && y>=0)
+	if(this->m_boardVal[x][y]>8)
+	{
+		return _FALSE;
+	}
+	else if(x<m_boardVal.size() && y<m_boardVal.size() && x>=0 && y>=0)
     	{
 	     	this->m_boardVal[x][y]=200;
 		return _TRUE;
@@ -159,7 +162,10 @@ _STATUS CcheckerBoard::m_fnInsertWchess(int x,int y)
 _STATUS CcheckerBoard::m_fnInsertBchess(int x,int y) 
 {
 //this function is to insert black chess in CcheckerBoard(insert posistion:(x,y))
-   
+   	if(this->m_boardVal[x][y]>8)
+        {
+                return _FALSE;
+        }
      	if(x<m_boardVal.size() && y<m_boardVal.size() && x>=0 && y>=0)
      	{
    		this->m_boardVal[x][y]=100;

@@ -3,12 +3,15 @@
 #include"checkerboard.h"
 
 /***************Macro definition***********************/
-#define DIRECTION 	INT
+#define DIRECTION 	int
 #define VERTICAL 	1
 #define HORIZON  	2
 #define FSLASH		3	//forward slash
 #define BSLASH		4	//back slash
 
+#define PLAYERTYPE      int
+#define BLACK		0
+#define WHITE		1
 /*****************************************************/
 //
 //
@@ -28,7 +31,7 @@ class Cpeople{
 
 		virtual _STATUS m_fnHand(Ccheckerboard myBoard,int x_label,int y_label,int hvalue) = 0;
 		//to imitate the hand of people to play the game;
-		//input an object of the class(Ccheckerboard) which is the checkerboard need to be seen;
+		//input an object of the class(Ccheckerboard) which is the checkerboard need to be writed;
 		//input the x_label and y_label of the checkerboard;
 		//input hvalue need te be write to the value of the vector of the member of the object of the Ccheckerboard;
 		//this is a pure virtual function becasue of the different of the judge and the player;
@@ -43,11 +46,41 @@ class Cpeople{
 
 	protected:
 		int m_peopleId;
+		//the identifier of each player;
 
 };
 
 /************************************************************************/
+//
+//
+//
+/**************************class Cplayer*********************************/
+class Cplayer:public Cpeople{
+	public:
+		Cplayer(PLATERTYPE playerType);
+		//This is the constructor;
+		//main job is to initialize the m_playerType;
+		
+		virtual  _STATUS m_fnHand(Ccheckerboard myBoard,int x_label,int y_label,int hvalue);
+		//the virtual function inherit from base class;
+		//to imitate the hand of people to play the game;
+		//input an object of the class(Ccheckerboard) which is the checkerboard need to be writed;
+		//input the x_label and y_label of the checkerboard;
+		//input hvalue need te be write to the value of the vector of the member of the object of the Ccheckerboard;
 
+
+
+
+		//there still have some function which doesnt write yet;
+
+
+
+		
+	protected:
+		PLAYERTYPE m_playerType;
+		//which color of the piece the player hold;
+};
+/************************************************************************/
 
 
 
