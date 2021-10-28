@@ -58,7 +58,7 @@ class Cpeople{
 /**************************class Cplayer*********************************/
 class Cplayer:public Cpeople{
 	public:
-		Cplayer(PLATERTYPE playerType);
+		Cplayer(PLATERTYPE playerType,int iId);
 		//This is the constructor;
 		//main job is to initialize the m_playerType;
 		
