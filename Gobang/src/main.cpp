@@ -1,5 +1,6 @@
 #include"checkerboard.h"
- using namespace std;
+#include"person.h"
+using namespace std;
 
 
 //just for a test,after test it can be delete;
