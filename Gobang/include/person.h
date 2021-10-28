@@ -12,6 +12,7 @@
 #define PLAYERTYPE      int
 #define BLACK		0
 #define WHITE		1
+#define NOWINGER	-1
 /*****************************************************/
 //
 //
@@ -27,7 +28,7 @@ class Cpeople{
 	        //to imitate the eye of people to see the board;
 		//input an object of the class(Ccheckerboard) which is the checkerboard need to be seen;
 		//input the x_label and y_label of the checkerboard;
-		//input evalue need te be read is the value of the vector of the member of the object of the Ccheckerboard;
+		//the evalue need te be read is the value of the vector of the member of the object of the Ccheckerboard;
 
 		virtual _STATUS m_fnHand(Ccheckerboard myBoard,int x_label,int y_label,int hvalue) = 0;
 		//to imitate the hand of people to play the game;
@@ -81,7 +82,41 @@ class Cplayer:public Cpeople{
 		//which color of the piece the player hold;
 };
 /************************************************************************/
+//
+//
+//
+/************************class Cjudge************************************/
+class Cjudge:public Cjudge{
+	public:
+		Cjudge();
+		//This is the constructor;
+                //main job is to invoke the constructor of the father class;
 
+		virtual  _STATUS m_fnHand(Ccheckerboard myBoard,int x_label,int y_label,int hvalue);
+		//the virtual function inherit from base class;
+		//do nothing;
+		
+		PLAYERTYPE m_fnJudgeOutcome(Ccheckerboard myBoard,int x_label,int y_label);
+		//base on the lacation(int x_label,int y_label) of thr checkerboard(Ccheckerboard myBoard);
+		//to judge whether there generate the winger;
+		//if there generate the winger return the type of winger;
+		//else return nowinger;
+		
+
+
+
+
+
+		//there still have some function which doesnt write yet;
+		
+		
+
+};
+
+
+
+
+/************************************************************************/
 
 
 
