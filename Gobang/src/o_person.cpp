@@ -108,8 +108,47 @@ _STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION m
 	return _TRUE;
 }
 
+/************************************************************************/
+//
+//
+//
+/**************************class Cplayer*********************************/
 
+//This is the constructor;
+//main job is to initialize the m_playerType;
+//
+Cplayer::Cplayer(PLATERTYPE playerType,int iId):m_playerType(playerType){};
 
+//
+//
+//
+/*to imitate the hand of people to play the game;
+input an object of the class(Ccheckerboard) which is the checkerboard need to be writed;
+input the x_label and y_label of the checkerboard;
+input hvalue need te be write to the value of the vector of the member of the object of the Ccheckerboard;
+this is a pure virtual function becasue of the different of the judge and the player;
+  */
+ virtual _STATUS Cplayer:: M_fnHand(CcheckerBoard myBoard, int x_label ,int y_label );
+{
+        int len = myBoard.m_boardVal.size();//to get the size of the vector(it is the dimention of the checkerboard)
+
+        if(fnCheckLimits(x_label,len)==_FALSE||fnCheckLimits(y_label,len)==_FALSE)//whether the x_label or the y_label over the limits;
+        return _FALSE;
+         
+	if(this->m_playerType==BLACK)//judge PLATERTYPE of chess player
+	{
+	int re =myBoard.m_fnInsertBchess(x_label , y_label);
+         //insert black chess on the position(x_label ,y_label)
+	    return re; 
+   
+	}else if(this->m_playerType==WHITE)
+	{
+	int re=myBoard.m_fnInsertWchess(x_label , y_label);
+	// insert white chess on the position(x_label,y_label)
+	   return re;
+        }else return _FALSE;
+
+}
 
 
 
