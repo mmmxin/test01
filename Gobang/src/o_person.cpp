@@ -109,16 +109,16 @@ _STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION m
 }
 
 /************************************************************************/
-//
-//
-//
+
+
+
+
+
 /**************************class Cplayer*********************************/
 
-//This is the constructor;
-//main job is to initialize the m_playerType;
-//
+/**This is the constructor;
+  *main job is to initialize the m_playerType;*/
 Cplayer::Cplayer(PLATERTYPE playerType,int iId):Cpeople(int iId),m_playerType(playerType){};
-
 //
 //
 //
