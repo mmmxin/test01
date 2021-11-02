@@ -86,7 +86,7 @@ _STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION m
 	/**count the num in forward*/
 	x_temp = x_label+x_change;//first step
 	y_temp = y_label+y_change;
-	while(myBoard.m_fnReadChess(x_label,y_label,value) == _TRUE){
+	while(myBoard.m_fnReadChess(x_temp,y_temp,value) == _TRUE){
 		if(value != color;)
 			break;
 
@@ -97,7 +97,7 @@ _STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION m
 	/**count the num in back*/
 	x_temp = x_label-x_change;//first step
         y_temp = y_label-y_change;
-        while(myBoard.m_fnReadChess(x_label,y_label,value) == _TRUE){
+        while(myBoard.m_fnReadChess(x_temp,y_temp,value) == _TRUE){
                 if(value != color;)
 			break;
 
@@ -117,7 +117,7 @@ _STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION m
 //This is the constructor;
 //main job is to initialize the m_playerType;
 //
-Cplayer::Cplayer(PLATERTYPE playerType,int iId):m_playerType(playerType){};
+Cplayer::Cplayer(PLATERTYPE playerType,int iId):Cpeople(int iId),m_playerType(playerType){};
 
 //
 //
