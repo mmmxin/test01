@@ -10,12 +10,12 @@
 #define BSLASH		4	//back slash
 
 #define PLAYERTYPE      int
-#define BLACK		0
-#define WHITE		1
-#define NOWINGER	-1
+#define BLACK		100
+#define WHITE		200
+#define EMPTY		-1
 /*****************************************************/
 //
-//
+//input the x_label and y_label of the checkerboard;
 //
 /*********************abstract class Cpeople*****************************/
 class Cpeople{
@@ -38,7 +38,7 @@ class Cpeople{
 		//this is a pure virtual function becasue of the different of the judge and the player;
 		
 
-		_STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION mscroDir,int& numOfCount);
+		_STATUS m_fnConsiCount(CcheckerBoard myBoard,int x_label,int y_label,DIRECTION mscroDir,PLAYERTYPE color,int& numOfCount);
 		//to count the number of the piece of the location(depend on the x_label and the y_label) of the checkerboard;
 		//input an object of the class(Ccheckerboard) which is the checkerboard need to be count;
 		//input the x_label and y_label of the checkerboard;
